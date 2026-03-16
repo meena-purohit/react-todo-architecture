@@ -8,7 +8,9 @@ function App () {
   const {todos,addTodo,deleteTodo,toggleTodo}= useTodoLogic();
   return(
     <div>
-      <h1>My First React Project</h1>
+      <h1 
+     className="bg-blue-600 text-white p-4 text-center rounded-lg shadow-xl">
+  Tailwind v4 is Working!</h1>
       <TodoHeader />
       <TodoInput addTodo={addTodo} />
       <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
