@@ -1,7 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function useTodoLogic(){
-    const [todos,setTodos]=useState([]);
+    const [todos,setTodos]=useState(()=>{
+        //1. get the data from LocalStorage
+        const saveData = localStorage.getItem("my-todo-list");
+        //2. if it exists, parse it back into an array. if not, start with[]
+        return saveData ? JSON.parse(saveData): [];
+    });
+    useEffect(()=>{
+        localStorage.setItem("my-todo-list", JSON.stringify(todos));
+    },[todos]);
 
     const addTodo = (text) =>{
     const newTodo = {
@@ -25,6 +33,7 @@ export default function useTodoLogic(){
             )
         )
     }
+
     return {todos,addTodo,deleteTodo,toggleTodo}
        
     
