@@ -1,3 +1,8 @@
+![React](https://img.shields.io)
+![Vite](https://img.shields.io)
+![TailwindCSS](https://img.shields.io)
+![Vercel](https://img.shields.io)
+
 # Modern React Todo Architecture 🚀
 
 A professional-grade Todo application built with **React 19** and **Vite**, focusing on clean code and scalable architecture.
