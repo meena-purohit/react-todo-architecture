@@ -43,7 +43,15 @@ export default function useTodoLogic(){
         return true; // "all"
     });
 
-    return {todos: fiteredTodos,addTodo,deleteTodo,toggleTodo,setFilter,filter}
+    const editTodo = (id,newText) => {
+        setTodos(
+            todos.map((todo)=>
+           todo.id === id ? {...todo, text: newText } : todo
+            )
+        );
+    };
+
+    return {todos: fiteredTodos,addTodo,deleteTodo,toggleTodo,setFilter,filter,editTodo};
        
     
 }

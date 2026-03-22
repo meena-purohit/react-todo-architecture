@@ -3,10 +3,11 @@ import TodoHeader from "./components/TodoHeader";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 import TodoFilter from "./TodoFilter";
+import TodoItem from "./components/TodoItem";
 
 
 function App () {
-  const {todos,addTodo,deleteTodo,toggleTodo,filter,setFilter}= useTodoLogic();
+  const {todos,addTodo,deleteTodo,toggleTodo,filter,setFilter,editTodo}= useTodoLogic();
   return(
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
@@ -22,7 +23,8 @@ function App () {
       </div>
       <TodoFilter filter={filter} setFilter={setFilter} />
 
-      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} />
+      
       </div>
     </div>
   )
