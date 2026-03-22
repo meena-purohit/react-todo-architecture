@@ -16,7 +16,7 @@ A professional-grade Todo application built with **React 19** and **Vite**, focu
 - **Input Validation**: Using `.trim()` and "Bang" (`!`) operators to protect against empty data.
 
 ## 🚀 Live Demo
-[Check out the Live App here!](YOUR_VERCEL_LINK_HERE)
+[Check out the Live App here!](https://react-todo-architecture.vercel.app/)
 
 ## 📸 Preview
-![App Screenshot](./screenshot.png)
+![App Screenshot](screenshot.png)
